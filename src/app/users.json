@@ -1,0 +1,30 @@
+[
+
+    {
+        "photo": "assets/4.jpg",
+        "name": "Ahmed Khaled",
+        "date": "20 Dec 2020",
+        "review": "I didn't like it!",
+        "reviewnum": 1,
+        "commenttext": "shahry is the best product/company/service i have ever encountered in my entire life.its beyond words!always good support,very rigid security(make sure your device is paired always,and they have the most professional,friendly support teams by along shot!super happy to be onboard with such a progressive brand!",
+        "replytext": "hey ahmed,sorry to hear that,we'd need to take a closer look at this for you.can you please open a live chat by going to my account>support>support chat in the shahry app?best,lucy,shahry support"
+    },
+    {
+        "photo": "assets/5.jpg",
+        "name": "Osama Amin",
+        "date": "20 Dec 2020",
+        "review": "Best App ever!",
+        "reviewnum": 4,
+        "commenttext": "shahry is the best product/company/service i have ever encountered in my entire life.its beyond words!always good support,very rigid security(make sure your device is paired always,and they have the most professional,friendly support teams by along shot!super happy to be onboard with such a progressive brand!",
+        "replytext": ""
+    },
+    {
+        "photo": "assets/6.jpg",
+        "name": "Ahmed Mohammed",
+        "date": "20 Dec 2020",
+        "review": "Best App ever!",
+        "reviewnum": 4,
+        "commenttext": "shahry is the best product/company/service i have ever encountered in my entire life.its beyond words!always good support,very rigid security(make sure your device is paired always,and they have the most professional,friendly support teams by along shot!super happy to be onboard with such a progressive brand!",
+        "replytext": ""
+    }
+]

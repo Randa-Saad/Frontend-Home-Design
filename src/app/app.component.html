@@ -1,0 +1,70 @@
+<body>
+    <!------------------------------------------------- navbar part ----------------------------------->
+    <nav class="navbar navbar-light bg-light">
+        <div class="container">
+            <a class="navbar-brand"><img src="https://d2k2fr4kgoo5so.cloudfront.net/vue/img/logo.ea876b95.svg" alt="" width="160"></a>
+            <form class="d-flex">
+                <img src="assets/1.jpg" style=" border-radius: 50%;" alt="" width="40">
+                <p><b>Khaled Mohammed</b></p>
+            </form>
+        </div>
+    </nav>
+    <!------------------------------------------------- background part ----------------------------------->
+
+    <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="https://media.istockphoto.com/photos/shopping-online-concept-parcel-or-paper-cartons-with-a-shopping-cart-picture-id1249219777" class="d-block h-5 w-100" style="opacity: 0.5; height:400px;" alt="...">
+                <div class="carousel-caption  d-md-block">
+                    <h1><b>WHAT OUR USERS SAY ABOUT SHAHRY?</b></h1>
+                    <button type="button" class="btn btn-light" style="color:green; font-weight:bold; margin-bottom: 50px;">Add a Review</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!------------------------------------------------- first card part ----------------------------------->
+
+    <div class="card ">
+        <!-- Here I create a New Div with class name card -->
+        <div class="card_img">
+            <!-- Here I create a New Div for image with class name card_img -->
+            <img src="assets/2.jpg" alt="user-image">
+        </div>
+        <div class="card_info">
+            <!-- Here I create a New Div for user info with class name card_info -->
+            <h2>Yousef Mohamed</h2>
+            <p>20 Dec 2020</p>
+            <p>Best App ever!</p>
+            <p>4/5</p>
+            <p>shahry is the best product/company/service i have ever encountered in my entire life.its beyond words!always good support,very rigid security(make sure your device is paired always,and they have the most professional,friendly support teams
+                by along shot!super happy to be onboard with such a progressive brand!</p>
+            <p><br/><br/></p>
+
+            <!-- <a href="#!">loremIpsum.com</a> -->
+        </div>
+    </div>
+    <br/>
+    <br/>
+    <!------------------------------------------------- other cards ----------------------------------->
+    <div class="card " *ngFor="let user of users">
+        <br/>
+        <br/>
+        <!-- Here I create a New Div with class name card -->
+        <div class="card_img">
+            <!-- Here I create a New Div for image with class name card_img -->
+            <img [src]="user.photo" alt="user-image" />
+        </div>
+        <div class="card_info">
+            <!-- Here I create a New Div for user info with class name card_info -->
+            <h2>{{ user.name }}</h2>
+            <p>{{ user.date }}</p>
+            <p>{{ user.review }}</p>
+            <p>{{ user.reviewnum }}</p>
+            <p>{{ user.commenttext }}</p>
+            <p>{{ user.replytext }}</p>
+            <!-- <a href="#!">loremIpsum.com</a> -->
+        </div>
+    </div>
+</body>
