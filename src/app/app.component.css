@@ -17,7 +17,7 @@ h5 {
 
 #rating {
     display: inline-flex;
-    width: fit-content;
+    width: 170px;
     height: 30px;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* text-align: center;
@@ -29,13 +29,19 @@ h5 {
 .likebox {
     background-color: rgb(57, 143, 57);
     width: 35px;
+    padding: 5px;
 }
 
 .ratebox {
-    padding: 7px;
+    padding: 5px;
 }
 
 .fa-thumbs-up {
+    color: whitesmoke;
+    width: 10px;
+}
+
+.fa-thumbs-down {
     color: whitesmoke;
     width: 10px;
 }

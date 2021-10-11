@@ -46,14 +46,18 @@
 
             <div>
                 <div class="flex-container fit-content" id="rating">
-                    <i class="fa fa-thumbs-up"></i>
-                    <span class="fa fa-star " value="1"></span>
-                    <span class="fa fa-star " value="2"></span>
-                    <span class="fa fa-star " value="3"></span>
-                    <span class="fa fa-star" value="4"></span>
-                    <span class="fa fa-star" value="5"></span>
-                    <p style="display:inline-flex;">4/5</p>
+                    <div class="likebox">
+                        <i class="fa fa-thumbs-up"></i>
+                    </div>
+                    <div class="ratebox">
+                        <span class="fa fa-star " value="1" (click)="givestar(4);"></span>
+                        <span class="fa fa-star " value="2" (click)="givestar(4);"></span>
+                        <span class="fa fa-star " value="3" (click)="givestar(4);"></span>
+                        <span class="fa fa-star" value="4" (click)="givestar(4);"></span>
+                        <span class="fa fa-star" value="5" (click)="givestar(4);"></span>
 
+                    </div>
+                    <p style="display:inline-flex; padding:5px;">4/5</p>
 
                 </div>
             </div>
@@ -86,16 +90,19 @@
             <div>
                 <div class="flex-container fit-content" id="rating">
                     <div class="likebox">
-                        <i class="fa fa-thumbs-up"></i>
+                        <!-- <i class="{{likecontent}}"></i> -->
+                        <i *ngIf="liked && reaction(user.reviewnum)" class="fa fa-thumbs-up"></i>
+                        <i *ngIf="liked && !reaction(user.reviewnum)" class="fa fa-thumbs-down"></i>
                     </div>
                     <div class="ratebox">
-                        <span class="fa fa-star " value="1"></span>
-                        <span class="fa fa-star " value="2"></span>
-                        <span class="fa fa-star " value="3"></span>
-                        <span class="fa fa-star" value="4"></span>
-                        <span class="fa fa-star" value="5"></span>
-                        <p style="display:inline-flex; padding:5px;">{{ user.reviewnum }}/5</p>
+                        <span class="fa fa-star " value="1" (click)="givestar(user.reviewnum);"></span>
+                        <span class="fa fa-star " value="2" (click)="givestar(user.reviewnum);"></span>
+                        <span class="fa fa-star " value="3" (click)="givestar(user.reviewnum);"></span>
+                        <span class="fa fa-star" value="4" (click)="givestar(user.reviewnum);"></span>
+                        <span class="fa fa-star" value="5" (click)="givestar(user.reviewnum);"></span>
+
                     </div>
+                    <p style="display:inline-flex; padding:5px;">{{ user.reviewnum }}/5</p>
 
                 </div>
             </div>

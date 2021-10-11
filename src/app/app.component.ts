@@ -17,8 +17,33 @@ interface user {
 })
 export class AppComponent {
   title = 'shahrydesign';
+ //likecontent:string ='fa fa-thumbs-up';
   users: user[] = usersdata;
+  liked=true;
+  reaction(ratenumber:number):boolean
+  {
+   if(ratenumber<4)
+     {
+        let  liked=false;
+        //console.log("liked become false");
+        return false;
+     }
 
+    return true;
+ }
+   givestar(ratenumber:number) :boolean
+   {
+    if(ratenumber<4)
+      {
+      let  liked=false;
+      //console.log("liked become false");
+
+
+return false;
+      }
+
+return true;
+  }
   
  
 }
