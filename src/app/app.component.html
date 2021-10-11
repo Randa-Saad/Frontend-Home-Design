@@ -34,10 +34,21 @@
         </div>
         <div class="card_info">
             <!-- Here I create a New Div for user info with class name card_info -->
-            <h2>Yousef Mohamed</h2>
-            <p>20 Dec 2020</p>
-            <p>Best App ever!</p>
-            <p>4/5</p>
+            <h5>Yousef Mohamed</h5>
+            <small>20 Dec 2020</small>
+            <p style="font-size: x-large;">Best App ever!</p>
+            <div>
+                <div class="row" id="rating">
+                    <div class="col">
+                        <a><i class="fas fa-thumbs-up"></i></a>
+                    </div>
+                    <div class="col">
+                        <p>4/5</p>
+                    </div>
+                </div>
+
+            </div>
+
             <p>shahry is the best product/company/service i have ever encountered in my entire life.its beyond words!always good support,very rigid security(make sure your device is paired always,and they have the most professional,friendly support teams
                 by along shot!super happy to be onboard with such a progressive brand!</p>
             <p><br/><br/></p>
@@ -58,10 +69,23 @@
         </div>
         <div class="card_info">
             <!-- Here I create a New Div for user info with class name card_info -->
-            <h2>{{ user.name }}</h2>
-            <p>{{ user.date }}</p>
-            <p>{{ user.review }}</p>
-            <p>{{ user.reviewnum }}/5</p>
+            <h5>{{ user.name }}</h5>
+            <small>{{ user.date }}</small>
+
+            <p style="font-size: x-large;">{{ user.review }}</p>
+
+            <div>
+                <div class="row" id="rating">
+                    <div class="col">
+
+                    </div>
+                    <div class="col">
+                        <p>{{ user.reviewnum }}/5</p>
+                    </div>
+                </div>
+
+            </div>
+
             <p>{{ user.commenttext }}</p>
             <p>{{ user.replytext }}</p>
             <!-- <a href="#!">loremIpsum.com</a> -->

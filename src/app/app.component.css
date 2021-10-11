@@ -10,6 +10,25 @@ h1 {
     font-family: url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 }
 
+h5 {
+    color: rgb(53, 101, 202)
+}
+
+#rating {
+    display: inline-flex;
+    width: fit-content;
+    box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 2px;
+}
+
+small {
+    color: grey !important;
+    font-size: small !important;
+}
+
 .card {
     display: inline-flex;
     border: 1px solid #ddd;
