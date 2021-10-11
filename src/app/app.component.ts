@@ -20,12 +20,14 @@ export class AppComponent {
  //likecontent:string ='fa fa-thumbs-up';
   users: user[] = usersdata;
   liked=true;
+
   reaction(ratenumber:number):boolean
   {
    if(ratenumber<4)
      {
         let  liked=false;
         //console.log("liked become false");
+        
         return false;
      }
 

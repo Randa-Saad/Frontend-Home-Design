@@ -50,10 +50,10 @@
                         <i class="fa fa-thumbs-up"></i>
                     </div>
                     <div class="ratebox">
-                        <span class="fa fa-star " value="1" (click)="givestar(4);"></span>
-                        <span class="fa fa-star " value="2" (click)="givestar(4);"></span>
-                        <span class="fa fa-star " value="3" (click)="givestar(4);"></span>
-                        <span class="fa fa-star" value="4" (click)="givestar(4);"></span>
+                        <span class="fa fa-star checked " value="1" (click)="givestar(4);"></span>
+                        <span class="fa fa-star checked" value="2" (click)="givestar(4);"></span>
+                        <span class="fa fa-star checked" value="3" (click)="givestar(4);"></span>
+                        <span class="fa fa-star checked" value="4" (click)="givestar(4);"></span>
                         <span class="fa fa-star" value="5" (click)="givestar(4);"></span>
 
                     </div>
@@ -89,29 +89,40 @@
 
             <div>
                 <div class="flex-container fit-content" id="rating">
-                    <div class="likebox">
+                    <div class="likebox" style="display:inline-flex;" *ngIf="liked && reaction(user.reviewnum)">
                         <!-- <i class="{{likecontent}}"></i> -->
-                        <i *ngIf="liked && reaction(user.reviewnum)" class="fa fa-thumbs-up"></i>
-                        <i *ngIf="liked && !reaction(user.reviewnum)" class="fa fa-thumbs-down"></i>
+                        <i class="fa fa-thumbs-up"></i>
                     </div>
-                    <div class="ratebox">
-                        <span class="fa fa-star " value="1" (click)="givestar(user.reviewnum);"></span>
-                        <span class="fa fa-star " value="2" (click)="givestar(user.reviewnum);"></span>
-                        <span class="fa fa-star " value="3" (click)="givestar(user.reviewnum);"></span>
-                        <span class="fa fa-star" value="4" (click)="givestar(user.reviewnum);"></span>
-                        <span class="fa fa-star" value="5" (click)="givestar(user.reviewnum);"></span>
+                    <div class="badbox" style="display:inline-flex;" *ngIf=" liked && !reaction(user.reviewnum)">
+                        <i class="fa fa-thumbs-down "></i>
+                    </div>
+                    <div class="ratebox ">
+
+                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4" (click)="givestar(user.reviewnum); "></span>
+                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4" (click)="givestar(user.reviewnum); "></span>
+                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4" (click)="givestar(user.reviewnum); "></span>
+                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4" (click)="givestar(user.reviewnum); "></span>
+
+                        <span class="fa fa-star checked " value="1 " (click)="givestar(user.reviewnum);" *ngIf="user.reviewnum<4"></span>
+                        <span class="fa fa-star " value="2 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
+                        <span class="fa fa-star " value="3 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
+                        <span class="fa fa-star " value="4 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
+                        <span class="fa fa-star " value="5 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
+                        <span class="fa fa-star " value="1 " (click)="givestar(user.reviewnum); "></span>
 
                     </div>
-                    <p style="display:inline-flex; padding:5px;">{{ user.reviewnum }}/5</p>
-
+                    <p style="display:inline-flex; padding:5px; ">{{ user.reviewnum }}/5</p>
                 </div>
-            </div>
 
+
+            </div>
         </div>
+
+
 
         <p>{{ user.commenttext }}</p>
         <p>{{ user.replytext }}</p>
-        <!-- <a href="#!">loremIpsum.com</a> -->
     </div>
+    <!-- <a href="#! ">loremIpsum.com</a> -->
 
 </body>

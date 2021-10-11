@@ -32,6 +32,12 @@ h5 {
     padding: 5px;
 }
 
+.badbox {
+    background-color: rgb(192, 60, 60);
+    width: 35px;
+    padding: 5px;
+}
+
 .ratebox {
     padding: 5px;
 }
@@ -39,16 +45,23 @@ h5 {
 .fa-thumbs-up {
     color: whitesmoke;
     width: 10px;
+    padding: 4px;
 }
 
 .fa-thumbs-down {
     color: whitesmoke;
     width: 10px;
+    padding: 4px;
 }
 
 .fa-star:hover {
     color: orange;
 }
+
+
+/* .fa-star {
+    color: orange;
+} */
 
 .checked {
     color: orange;
