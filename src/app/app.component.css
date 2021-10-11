@@ -6,7 +6,8 @@ body {
 
 h1 {
     color: rgb(17, 15, 15);
-    margin-bottom: 80px;
+    margin-top: 30px;
+    margin-bottom: 50px;
     font-family: url('https://fonts.googleapis.com/css2?family=Oswald:wght@600&display=swap');
 }
 
@@ -17,11 +18,34 @@ h5 {
 #rating {
     display: inline-flex;
     width: fit-content;
+    height: 30px;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    text-align: center;
+    /* text-align: center;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
     margin-bottom: 2px;
+}
+
+.likebox {
+    background-color: rgb(57, 143, 57);
+    width: 35px;
+}
+
+.ratebox {
+    padding: 7px;
+}
+
+.fa-thumbs-up {
+    color: whitesmoke;
+    width: 10px;
+}
+
+.fa-star:hover {
+    color: orange;
+}
+
+.checked {
+    color: orange;
 }
 
 small {

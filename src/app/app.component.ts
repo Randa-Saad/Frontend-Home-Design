@@ -18,5 +18,7 @@ interface user {
 export class AppComponent {
   title = 'shahrydesign';
   users: user[] = usersdata;
+
+  
  
 }
