@@ -46,7 +46,8 @@
 
             <div>
                 <div class="flex-container fit-content" id="rating">
-                    <div class="likebox">
+                    <div class="likebox" style="display:inline-flex;" *ngIf="liked && reaction(4)">
+                        <!-- <i class="{{likecontent}}"></i> -->
                         <i class="fa fa-thumbs-up"></i>
                     </div>
                     <div class="ratebox">
@@ -61,10 +62,11 @@
 
                 </div>
             </div>
-
+            <br/>
             <p>shahry is the best product/company/service i have ever encountered in my entire life.its beyond words!always good support,very rigid security(make sure your device is paired always,and they have the most professional,friendly support teams
                 by along shot!super happy to be onboard with such a progressive brand!</p>
-            <p><br/><br/></p>
+            <p></p>
+            <button type="button" class="btn btn-success">ADD COMMENT</button>
 
             <!-- <a href="#!">loremIpsum.com</a> -->
         </div>
@@ -107,7 +109,7 @@
                         <span class="fa fa-star " value="2 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
                         <span class="fa fa-star " value="3 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
                         <span class="fa fa-star " value="4 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
-                        <span class="fa fa-star " value="5 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
+
                         <span class="fa fa-star " value="1 " (click)="givestar(user.reviewnum); "></span>
 
                     </div>
@@ -117,11 +119,10 @@
 
             </div>
         </div>
-
-
-
         <p>{{ user.commenttext }}</p>
         <p>{{ user.replytext }}</p>
+        <button type="button" class="btn btn-success">ADD COMMENT</button>
+
     </div>
     <!-- <a href="#! ">loremIpsum.com</a> -->
 

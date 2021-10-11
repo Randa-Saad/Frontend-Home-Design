@@ -107,3 +107,9 @@ small {
 a:hover {
     color: black;
 }
+
+.btn-success {
+    margin-bottom: 20px;
+    background-color: rgb(12, 139, 148);
+    width: 200px;
+}
