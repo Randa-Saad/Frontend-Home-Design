@@ -20,22 +20,7 @@ h5 {
     width: 170px;
     height: 30px;
     box-shadow: 0 0px 0px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* text-align: center;
-    justify-content: center;
-    align-items: center; */
     margin-bottom: 2px;
-}
-
-.likebox {
-    background-color: rgb(57, 143, 57);
-    width: 35px;
-    padding: 5px;
-}
-
-.badbox {
-    background-color: rgb(192, 60, 60);
-    width: 35px;
-    padding: 5px;
 }
 
 .ratebox {
@@ -48,20 +33,27 @@ h5 {
     padding: 4px;
 }
 
+.likebox {
+    background-color: rgb(57, 143, 57);
+    width: 35px;
+    padding: 5px;
+}
+
 .fa-thumbs-down {
     color: whitesmoke;
     width: 10px;
     padding: 4px;
 }
 
+.badbox {
+    background-color: rgb(192, 60, 60);
+    width: 35px;
+    padding: 5px;
+}
+
 .fa-star:hover {
     color: orange;
 }
-
-
-/* .fa-star {
-    color: orange;
-} */
 
 .checked {
     color: orange;
@@ -81,17 +73,16 @@ small {
     margin-top: -100px;
     justify-content: center;
     align-items: center;
-    margin-bottom: 40px;
+    margin-bottom: 70px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .card_img {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     overflow: hidden;
     border-radius: 50%;
-    margin: -60px auto 0;
-    margin-top: -80px;
+    margin-top: -90px;
 }
 
 .card_img img {
@@ -124,7 +115,6 @@ a:hover {
     justify-content: center;
     align-items: center;
     margin-bottom: 40px;
-    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
     margin-left: 80px;
     margin-right: 80px;
     padding: 8px;
@@ -135,7 +125,6 @@ a:hover {
     height: 70px;
     overflow: hidden;
     border-radius: 50%;
-    /* margin: -60px auto 0; */
     margin-bottom: -20px;
     justify-content: center;
     align-items: center;

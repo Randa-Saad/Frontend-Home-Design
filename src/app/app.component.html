@@ -1,5 +1,3 @@
-<!DOCTYPE html>
-
 <head>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -24,6 +22,7 @@
                 <img src="https://media.istockphoto.com/photos/shopping-online-concept-parcel-or-paper-cartons-with-a-shopping-cart-picture-id1249219777" class="d-block h-5 w-100" style="opacity: 0.5; height:400px;" alt="...">
                 <div class="carousel-caption  d-md-block">
                     <h1><b>WHAT OUR USERS SAY ABOUT SHAHRY?</b></h1>
+                    <!------------------------------------------ implementation of review ---------------------------------------------------->
                     <ng-template #reviewcontent let-modal>
                         <div class="modal-header">
                             <h4 class="modal-title" id="modal-basic-title">
@@ -62,7 +61,7 @@
 
     <!------------------------------------------------- first card part ----------------------------------->
 
-    <div class="card " style="margin-top: -100px;;">
+    <div class="card " style="padding-top: 40px;">
         <!-- Here I create a New Div with class name card -->
         <div class="card_img">
             <!-- Here I create a New Div for image with class name card_img -->
@@ -81,11 +80,11 @@
                         <i class="fa fa-thumbs-up"></i>
                     </div>
                     <div class="ratebox">
-                        <span class="fa fa-star checked " value="1" (click)="givestar(4);"></span>
-                        <span class="fa fa-star checked" value="2" (click)="givestar(4);"></span>
-                        <span class="fa fa-star checked" value="3" (click)="givestar(4);"></span>
-                        <span class="fa fa-star checked" value="4" (click)="givestar(4);"></span>
-                        <span class="fa fa-star" value="5" (click)="givestar(4);"></span>
+                        <span class="fa fa-star checked " value="1"></span>
+                        <span class="fa fa-star checked" value="2"></span>
+                        <span class="fa fa-star checked" value="3"></span>
+                        <span class="fa fa-star checked" value="4"></span>
+                        <span class="fa fa-star" value="5"></span>
 
                     </div>
                     <p style="display:inline-flex; padding:5px;">4/5</p>
@@ -96,6 +95,7 @@
             <p>shahry is the best product/company/service i have ever encountered in my entire life.its beyond words!always good support,very rigid security(make sure your device is paired always,and they have the most professional,friendly support teams
                 by along shot!super happy to be onboard with such a progressive brand!</p>
             <p></p>
+            <!--------------------------------------- implementation of comment ---------------------------------------------------->
             <ng-template #commentcontent let-modal>
                 <div class="modal-header">
                     <h4 class="modal-title" id="modal-basic-title">
@@ -135,7 +135,7 @@
     </div>
     <br/>
     <br/>
-    <!------------------------------------------------- other cards ----------------------------------->
+    <!------------------------------------------------- loop of other cards ----------------------------------->
     <div class="card " *ngFor="let user of users">
         <br/>
         <br/>
@@ -154,7 +154,7 @@
             <div>
                 <div class="flex-container fit-content" id="rating">
                     <div class="likebox" style="display:inline-flex;" *ngIf="liked && reaction(user.reviewnum)">
-                        <!-- <i class="{{likecontent}}"></i> -->
+
                         <i class="fa fa-thumbs-up"></i>
                     </div>
                     <div class="badbox" style="display:inline-flex;" *ngIf=" liked && !reaction(user.reviewnum)">
@@ -162,17 +162,17 @@
                     </div>
                     <div class="ratebox ">
 
-                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4" (click)="givestar(user.reviewnum); "></span>
-                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4" (click)="givestar(user.reviewnum); "></span>
-                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4" (click)="givestar(user.reviewnum); "></span>
-                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4" (click)="givestar(user.reviewnum); "></span>
+                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4"></span>
+                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4"></span>
+                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4"></span>
+                        <span class="fa fa-star checked" value="1 " *ngIf="user.reviewnum>=4"></span>
 
-                        <span class="fa fa-star checked " value="1 " (click)="givestar(user.reviewnum);" *ngIf="user.reviewnum<4"></span>
-                        <span class="fa fa-star " value="2 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
-                        <span class="fa fa-star " value="3 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
-                        <span class="fa fa-star " value="4 " (click)="givestar(user.reviewnum); " *ngIf="user.reviewnum<4"></span>
+                        <span class="fa fa-star checked " value="1 " *ngIf="user.reviewnum<4 "></span>
+                        <span class="fa fa-star " value="2" *ngIf="user.reviewnum<4 "></span>
+                        <span class="fa fa-star " value="3" *ngIf="user.reviewnum<4 "></span>
+                        <span class="fa fa-star " value="4" *ngIf="user.reviewnum<4 "></span>
 
-                        <span class="fa fa-star " value="1 " (click)="givestar(user.reviewnum); "></span>
+                        <span class="fa fa-star " value="1 "></span>
 
                     </div>
                     <p style="display:inline-flex; padding:5px; ">{{ user.reviewnum }}/5</p>
@@ -183,16 +183,17 @@
         </div>
 
         <p style="margin:20px; ">{{ user.commenttext }}</p>
-        <div class="replybox" *ngIf="user.replytext">
+        <div class="replybox " *ngIf="user.replytext ">
             <p>{{ user.replytext }}</p>
-            <div class="replyimage">
-                <img src="assets/4.jpg" alt="user-image">
+            <div class="replyimage ">
+                <img src="assets/4.jpg " alt="user-image ">
             </div>
 
         </div>
-        <button type="button " class="btn btn-success " (click)="opencomment(commentcontent)">ADD COMMENT</button>
+
+
+        <button type="button " class="btn btn-success " (click)="opencomment(commentcontent) ">ADD COMMENT</button>
 
     </div>
-
 
 </body>
