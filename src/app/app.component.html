@@ -24,7 +24,37 @@
                 <img src="https://media.istockphoto.com/photos/shopping-online-concept-parcel-or-paper-cartons-with-a-shopping-cart-picture-id1249219777" class="d-block h-5 w-100" style="opacity: 0.5; height:400px;" alt="...">
                 <div class="carousel-caption  d-md-block">
                     <h1><b>WHAT OUR USERS SAY ABOUT SHAHRY?</b></h1>
-                    <button type="button" class="btn btn-light" style="color:green; font-weight:bold; margin-bottom: 150px;">Add a Review</button>
+                    <ng-template #reviewcontent let-modal>
+                        <div class="modal-header">
+                            <h4 class="modal-title" id="modal-basic-title">
+                                ADD Review
+                            </h4>
+                            <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+                    
+                                <span aria-hidden="true">
+                                    ×
+                                </span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="dateOfBirth">
+                                        Your Review
+                                    </label>
+                                    <div class="input-group">
+                                        <input type="text" id="review" class="form-control" placeholder="...">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">
+                                Save
+                            </button>
+                        </div>
+                    </ng-template>
+                    <button type="button" class="btn btn-light" style="color:green; font-weight:bold; margin-bottom: 150px;" (click)="openreview(reviewcontent)">Add a Review</button>
                 </div>
             </div>
         </div>
@@ -38,7 +68,7 @@
             <!-- Here I create a New Div for image with class name card_img -->
             <img src="assets/2.jpg" alt="user-image">
         </div>
-        <div class="card_info">
+        <div class="card_info" let user of users>
             <!-- Here I create a New Div for user info with class name card_info -->
             <h5>Yousef Mohamed</h5>
             <small>20 Dec 2020</small>
@@ -66,9 +96,41 @@
             <p>shahry is the best product/company/service i have ever encountered in my entire life.its beyond words!always good support,very rigid security(make sure your device is paired always,and they have the most professional,friendly support teams
                 by along shot!super happy to be onboard with such a progressive brand!</p>
             <p></p>
-            <button type="button" class="btn btn-success">ADD COMMENT</button>
+            <ng-template #commentcontent let-modal>
+                <div class="modal-header">
+                    <h4 class="modal-title" id="modal-basic-title">
+                        ADD COMMENT
+                    </h4>
+                    <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            
+                        <span aria-hidden="true">
+                            ×
+                        </span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                            <label for="dateOfBirth">
+                                Your Comment
+                            </label>
+                            <div class="input-group">
+                                <input type="text" id="dateOfBirth" class="form-control" placeholder="...">
 
-            <!-- <a href="#!">loremIpsum.com</a> -->
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-outline-dark" (click)="modal.close('Save click')">
+                        Save
+                    </button>
+                </div>
+            </ng-template>
+            <button type="button" class="btn btn-success" (click)="opencomment(commentcontent)">ADD COMMENT</button>
+
+
         </div>
     </div>
     <br/>
@@ -119,11 +181,18 @@
 
             </div>
         </div>
-        <p>{{ user.commenttext }}</p>
-        <p>{{ user.replytext }}</p>
-        <button type="button" class="btn btn-success">ADD COMMENT</button>
+
+        <p style="margin:20px; ">{{ user.commenttext }}</p>
+        <div class="replybox" *ngIf="user.replytext">
+            <p>{{ user.replytext }}</p>
+            <div class="replyimage">
+                <img src="assets/4.jpg" alt="user-image">
+            </div>
+
+        </div>
+        <button type="button " class="btn btn-success " (click)="opencomment(commentcontent)">ADD COMMENT</button>
 
     </div>
-    <!-- <a href="#! ">loremIpsum.com</a> -->
+
 
 </body>

@@ -109,7 +109,38 @@ a:hover {
 }
 
 .btn-success {
+    margin-top: 30px;
     margin-bottom: 20px;
     background-color: rgb(12, 139, 148);
     width: 200px;
+}
+
+.replybox {
+    background-color: rgb(238, 229, 229);
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    max-width: 70vw;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 40px;
+    /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
+    margin-left: 80px;
+    margin-right: 80px;
+    padding: 8px;
+}
+
+.replyimage {
+    width: 70px;
+    height: 70px;
+    overflow: hidden;
+    border-radius: 50%;
+    /* margin: -60px auto 0; */
+    margin-bottom: -20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: absolute;
+    display: inline-flex;
+    margin-left: -30px;
 }
